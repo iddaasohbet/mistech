@@ -1,0 +1,22 @@
+{
+  "siteName": "Premium Shop",
+  "siteDescription": "En kaliteli ürünler, en uygun fiyatlar",
+  "logo": "/logo.png",
+  "contactEmail": "info@premiumshop.com",
+  "contactPhone": "+90 (555) 123 45 67",
+  "contactAddress": "Musterstraße 123, 10115 Berlin, Deutschland",
+  "socialMedia": {
+    "facebook": "https://facebook.com/premiumshop",
+    "instagram": "https://instagram.com/premiumshop",
+    "twitter": "https://twitter.com/premiumshop",
+    "linkedin": "https://linkedin.com/company/premiumshop"
+  },
+  "currency": "EUR",
+  "currencySymbol": "€",
+  "language": "de",
+  "timezone": "Europe/Berlin",
+  "metaKeywords": "elektronik, telefon, tablet, bilgisayar, aksesuarlar",
+  "metaDescription": "Premium Shop - En kaliteli elektronik ürünler ve aksesuarlar"
+}
+
+

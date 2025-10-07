@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "home": "Anasayfa",
+    "products": "Tüm Ürünler",
+    "categories": "Kategoriler",
+    "contact": "İletişim",
+    "cart": "Sepet",
+    "favorites": "Favoriler",
+    "search": "Ara..."
+  },
+  "footer": {
+    "about": "Hakkımızda",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "contact": "İletişim",
+    "allRightsReserved": "Tüm hakları saklıdır"
+  },
+  "hero": {
+    "headline": "Premium Elektronik Ürünler",
+    "subtitle": "En kaliteli ürünler, en uygun fiyatlar",
+    "cta": "Hemen Satın Al",
+    "exploreProducts": "Ürünleri Keşfet",
+    "quickContact": "Hızlı İletişim"
+  },
+  "product": {
+    "addToCart": "Sepete Ekle",
+    "buyNow": "Hemen Al",
+    "outOfStock": "Stokta Yok",
+    "description": "Açıklama",
+    "specifications": "Teknik Özellikler",
+    "about": "Ürün Hakkında",
+    "specs": "Özellikler",
+    "shipping": "Kargo",
+    "warranty": "Garanti",
+    "guarantee": "Orijinallik garantisi ve faturalı gönderim",
+    "fastShipping": "Hızlı teslimat ve güvenli paketleme",
+    "returnPolicy": "14 gün iade ve değişim desteği",
+    "brand": "Marka",
+    "model": "Model",
+    "color": "Renk",
+    "capacity": "Kapasite",
+    "screen": "Ekran",
+    "shippingInfo": "Aynı gün kargo. Tahmini teslim: 2-3 gün.",
+    "warrantyInfo": "2 yıl yetkili servis güvencesi.",
+    "warrantyInfoOfficial": "2 yıl resmi distribütör garantisi.",
+    "similar": "Benzer Ürünler",
+    "cashPrice": "Peşin Fiyat",
+    "contactForPrice": "Fiyat için iletişime geçin",
+    "vatIncluded": "KDV dahildir • Hızlı kargo",
+    "quickContact": "Hızlı İletişim",
+    "return": "14 Gün İade"
+  },
+  "auth": {
+    "login": "Giriş Yap",
+    "logout": "Çıkış Yap",
+    "register": "Kayıt Ol",
+    "myAccount": "Hesabım",
+    "myOrders": "Siparişlerim"
+  },
+  "cookie": {
+    "message": "Bu web sitesi deneyiminizi iyileştirmek, performans ölçmek ve içerikleri kişiselleştirmek için çerezler kullanır. Detaylar için Çerez Politikası.",
+    "accept": "Kabul Et",
+    "decline": "Reddet"
+  }
+}

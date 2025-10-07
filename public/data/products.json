@@ -1,0 +1,39 @@
+[
+  {
+    "id": "p1",
+    "slug": "iphone-16-plus-teal",
+    "title": "iPhone 16 Plus 256GB Teal",
+    "brand": "Apple",
+    "price": 5999900,
+    "images": [
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-plus-teal-select-202409?wid=940&hei=1112&fmt=png-alpha&.v=eDZ4TmIwZjhkZTBEY1FWRFo2MS9LbGFmbVd6K1RXMWxjdEkrQVBucngrcDFjb0hmYnA5QjFGSnVvZmFaamExV2JjNitDN2kyNWFITm1kN1lsSUFHR1hURjI5L3dkZ1AxbDh4SlRZTlN5SGg3elJuQlNOb1hBU2ZGc01uK0d5YTU"
+    ]
+  },
+  {
+    "id": "p2",
+    "slug": "iphone-16-pro-cosmic-orange",
+    "title": "iPhone 16 Pro 256GB Cosmic Orange",
+    "brand": "Apple",
+    "price": 7999900,
+    "images": [
+      "https://images.techeblog.com/wp-content/uploads/2025/09/09153733/iphone-17-pro-cosmic-orange.jpg"
+    ]
+  },
+  {
+    "id": "p3",
+    "slug": "samsung-galaxy-s24-ultra",
+    "title": "Samsung Galaxy S24 Ultra 512GB",
+    "brand": "Samsung",
+    "price": 6499900,
+    "images": [
+      "https://as-images.apple.com/is/iphone-16-plus-teal-select-202409?wid=940&hei=1112&fmt=png-alpha"
+    ]
+  },
+  {"id":"p4","slug":"xiaomi-14-pro","title":"Xiaomi 14 Pro 256GB","brand":"Xiaomi","price":3499900,"images":["https://as-images.apple.com/is/iphone-16-plus-teal-select-202409?wid=940&hei=1112&fmt=png-alpha"]},
+  {"id":"p5","slug":"airpods-pro-2","title":"AirPods Pro 2","brand":"Apple","price":1099900,"images":["https://as-images.apple.com/is/iphone-16-plus-teal-select-202409?wid=940&hei=1112&fmt=png-alpha"]},
+  {"id":"p6","slug":"mag-safe-charger","title":"MagSafe Şarj Cihazı","brand":"Apple","price":499900,"images":["https://as-images.apple.com/is/iphone-16-plus-teal-select-202409?wid=940&hei=1112&fmt=png-alpha"]},
+  {"id":"p7","slug":"galaxy-buds3","title":"Galaxy Buds3","brand":"Samsung","price":899900,"images":["https://as-images.apple.com/is/iphone-16-plus-teal-select-202409?wid=940&hei=1112&fmt=png-alpha"]},
+  {"id":"p8","slug":"anker-powerbank-20k","title":"Anker Powerbank 20.000 mAh","brand":"Anker","price":699900,"images":["https://as-images.apple.com/is/iphone-16-plus-teal-select-202409?wid=940&hei=1112&fmt=png-alpha"]}
+]
+
+

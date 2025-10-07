@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Satır 1",
+    "items": [
+      {
+        "href": "/urunler",
+        "image": "https://cdn.dsmcdn.com/mnresize/800/-/ty1747/banner_request/e627c3da-f509-4fc4-a130-9d409bfc1163-dynamic-image-1439eabc-32cb-4602-aab4-1b3967a34ee4.jpeg",
+        "alt": "Kampanya 1",
+        "title": "",
+        "subtitle": ""
+      },
+      {
+        "href": "/urunler",
+        "image": "https://cdn.dsmcdn.com/mnresize/800/-/ty1747/banner_request/144b2536-975d-44cb-9e47-e178342fade5-dynamic-image-5a5bd6ca-67e7-4131-9485-cf9b463fc6ca.jpeg",
+        "alt": "Kampanya 2"
+      },
+      {
+        "href": "/urunler",
+        "image": "https://cdn.dsmcdn.com/mnresize/800/-/ty1747/banner_request/ea4b5446-f822-4bf3-9f21-a5ff04944226-dynamic-image-b5b9d203-23d8-484e-b74b-483d94276b60.jpeg",
+        "alt": "Kampanya 3"
+      }
+    ]
+  }
+]

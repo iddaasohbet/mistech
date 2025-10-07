@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "All Products",
+    "categories": "Categories",
+    "contact": "Contact",
+    "cart": "Cart",
+    "favorites": "Favorites",
+    "search": "Search..."
+  },
+  "footer": {
+    "about": "About Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "contact": "Contact",
+    "allRightsReserved": "All rights reserved"
+  },
+  "hero": {
+    "headline": "Premium Electronics Products",
+    "subtitle": "Best quality, best prices",
+    "cta": "Shop Now",
+    "exploreProducts": "Explore Products",
+    "quickContact": "Quick Contact"
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "outOfStock": "Out of Stock",
+    "description": "Description",
+    "specifications": "Specifications",
+    "about": "About Product",
+    "specs": "Specifications",
+    "shipping": "Shipping",
+    "warranty": "Warranty",
+    "guarantee": "Originality guarantee and invoiced delivery",
+    "fastShipping": "Fast delivery and secure packaging",
+    "returnPolicy": "14 days return and exchange support",
+    "brand": "Brand",
+    "model": "Model",
+    "color": "Color",
+    "capacity": "Capacity",
+    "screen": "Screen",
+    "shippingInfo": "Same day shipping. Estimated delivery: 2-3 days.",
+    "warrantyInfo": "2 years authorized service warranty.",
+    "warrantyInfoOfficial": "2 years official distributor warranty.",
+    "similar": "Similar Products",
+    "cashPrice": "Cash Price",
+    "contactForPrice": "Contact us for pricing",
+    "vatIncluded": "VAT included • Fast shipping",
+    "quickContact": "Quick Contact",
+    "return": "14 Days Return"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "myAccount": "My Account",
+    "myOrders": "My Orders"
+  },
+  "cookie": {
+    "message": "This website uses cookies to improve your experience, measure performance and personalize content. See our Cookie Policy for details.",
+    "accept": "Accept",
+    "decline": "Decline"
+  }
+}

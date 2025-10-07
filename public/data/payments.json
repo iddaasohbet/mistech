@@ -1,0 +1,68 @@
+{
+  "methods": [
+    {
+      "id": "bank-transfer",
+      "name": "Havale/IBAN",
+      "description": "Banka havalesi ile ödeme",
+      "type": "bank_transfer",
+      "enabled": true,
+      "icon": "bank",
+      "config": {
+        "bankName": "Deutsche Bank",
+        "iban": "DE89 3704 0044 0532 0130 00",
+        "bic": "COBADEFFXXX",
+        "accountHolder": "Premium Shop GmbH"
+      }
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "description": "PayPal ile güvenli ödeme",
+      "type": "paypal",
+      "enabled": true,
+      "icon": "paypal",
+      "config": {
+        "clientId": "",
+        "clientSecret": "",
+        "mode": "sandbox"
+      }
+    },
+    {
+      "id": "credit-card",
+      "name": "Kredi Kartı",
+      "description": "Visa, Mastercard, American Express",
+      "type": "credit_card",
+      "enabled": true,
+      "icon": "credit-card",
+      "config": {
+        "provider": "stripe",
+        "publicKey": "",
+        "secretKey": ""
+      }
+    },
+    {
+      "id": "klarna",
+      "name": "Klarna",
+      "description": "Klarna ile taksitli ödeme",
+      "type": "klarna",
+      "enabled": true,
+      "icon": "klarna",
+      "config": {
+        "apiKey": "",
+        "apiSecret": "",
+        "region": "eu"
+      }
+    },
+    {
+      "id": "cash-on-pickup",
+      "name": "Barzahlung bei Abholung",
+      "description": "Elden teslimde nakit ödeme",
+      "type": "cash",
+      "enabled": true,
+      "icon": "cash",
+      "config": {}
+    }
+  ]
+}
+
+

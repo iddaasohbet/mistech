@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ext3-1",
+    "title": "Örnek Ürün 5",
+    "brand": "Marka E",
+    "price": 459900,
+    "images": ["/next.svg"]
+  },
+  {
+    "id": "ext3-2",
+    "title": "Örnek Ürün 6",
+    "brand": "Marka F",
+    "price": 559900,
+    "images": ["/next.svg"]
+  }
+]
+

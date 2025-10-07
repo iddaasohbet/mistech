@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "products": "Alle Produkte",
+    "categories": "Kategorien",
+    "contact": "Kontakt",
+    "cart": "Warenkorb",
+    "favorites": "Favoriten",
+    "search": "Suchen..."
+  },
+  "footer": {
+    "about": "Über uns",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "contact": "Kontakt",
+    "allRightsReserved": "Alle Rechte vorbehalten"
+  },
+  "hero": {
+    "headline": "Premium Elektronik Produkte",
+    "subtitle": "Beste Qualität, beste Preise",
+    "cta": "Jetzt einkaufen",
+    "exploreProducts": "Produkte erkunden",
+    "quickContact": "Schnellkontakt"
+  },
+  "product": {
+    "addToCart": "In den Warenkorb",
+    "buyNow": "Jetzt kaufen",
+    "outOfStock": "Nicht verfügbar",
+    "description": "Beschreibung",
+    "specifications": "Technische Daten",
+    "about": "Über das Produkt",
+    "specs": "Spezifikationen",
+    "shipping": "Versand",
+    "warranty": "Garantie",
+    "guarantee": "Originalitätsgarantie und Lieferung mit Rechnung",
+    "fastShipping": "Schnelle Lieferung und sichere Verpackung",
+    "returnPolicy": "14 Tage Rückgabe- und Umtauschunterstützung",
+    "brand": "Marke",
+    "model": "Modell",
+    "color": "Farbe",
+    "capacity": "Kapazität",
+    "screen": "Bildschirm",
+    "shippingInfo": "Versand am selben Tag. Geschätzte Lieferung: 2-3 Tage.",
+    "warrantyInfo": "2 Jahre autorisierte Service-Garantie.",
+    "warrantyInfoOfficial": "2 Jahre offizielle Händlergarantie.",
+    "similar": "Ähnliche Produkte",
+    "cashPrice": "Barzahlungspreis",
+    "contactForPrice": "Kontaktieren Sie uns für den Preis",
+    "vatIncluded": "MwSt. enthalten • Schneller Versand",
+    "quickContact": "Schnellkontakt",
+    "return": "14 Tage Rückgabe"
+  },
+  "auth": {
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "register": "Registrieren",
+    "myAccount": "Mein Konto",
+    "myOrders": "Meine Bestellungen"
+  },
+  "cookie": {
+    "message": "Diese Website verwendet Cookies, um Ihr Erlebnis zu verbessern, die Leistung zu messen und Inhalte zu personalisieren. Details finden Sie in unserer Cookie-Richtlinie.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen"
+  }
+}

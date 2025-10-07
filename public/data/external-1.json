@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ext1-1",
+    "title": "Örnek Ürün 1",
+    "brand": "Marka A",
+    "price": 199900,
+    "images": ["/next.svg"]
+  },
+  {
+    "id": "ext1-2",
+    "title": "Örnek Ürün 2",
+    "brand": "Marka B",
+    "price": 299900,
+    "images": ["/next.svg"]
+  }
+]
+

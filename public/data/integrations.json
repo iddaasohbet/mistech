@@ -1,0 +1,125 @@
+{
+  "integrations": [
+    {
+      "id": "google-analytics",
+      "name": "Google Analytics",
+      "description": "Web sitenizin trafiğini ve kullanıcı davranışlarını analiz edin",
+      "category": "analytics",
+      "enabled": false,
+      "icon": "📊",
+      "config": {
+        "trackingId": "",
+        "measurementId": ""
+      }
+    },
+    {
+      "id": "google-tag-manager",
+      "name": "Google Tag Manager",
+      "description": "Tüm pazarlama etiketlerinizi tek yerden yönetin",
+      "category": "analytics",
+      "enabled": false,
+      "icon": "🏷️",
+      "config": {
+        "containerId": ""
+      }
+    },
+    {
+      "id": "facebook-pixel",
+      "name": "Facebook Pixel",
+      "description": "Facebook reklamlarınızın performansını takip edin",
+      "category": "marketing",
+      "enabled": false,
+      "icon": "📘",
+      "config": {
+        "pixelId": ""
+      }
+    },
+    {
+      "id": "google-ads",
+      "name": "Google Ads",
+      "description": "Google Ads conversion tracking",
+      "category": "marketing",
+      "enabled": false,
+      "icon": "🎯",
+      "config": {
+        "conversionId": "",
+        "conversionLabel": ""
+      }
+    },
+    {
+      "id": "sendgrid",
+      "name": "SendGrid",
+      "description": "Email gönderimi için SendGrid entegrasyonu",
+      "category": "email",
+      "enabled": false,
+      "icon": "📧",
+      "config": {
+        "apiKey": "",
+        "fromEmail": "",
+        "fromName": ""
+      }
+    },
+    {
+      "id": "mailchimp",
+      "name": "Mailchimp",
+      "description": "Email marketing ve newsletter yönetimi",
+      "category": "email",
+      "enabled": false,
+      "icon": "🐵",
+      "config": {
+        "apiKey": "",
+        "listId": ""
+      }
+    },
+    {
+      "id": "whatsapp-business",
+      "name": "WhatsApp Business",
+      "description": "Müşterilerinizle WhatsApp üzerinden iletişim kurun",
+      "category": "communication",
+      "enabled": false,
+      "icon": "💬",
+      "config": {
+        "phoneNumber": "",
+        "businessId": "",
+        "apiToken": ""
+      }
+    },
+    {
+      "id": "tawk-to",
+      "name": "Tawk.to",
+      "description": "Ücretsiz canlı destek sohbeti",
+      "category": "communication",
+      "enabled": false,
+      "icon": "💭",
+      "config": {
+        "propertyId": "",
+        "widgetId": ""
+      }
+    },
+    {
+      "id": "hotjar",
+      "name": "Hotjar",
+      "description": "Kullanıcı davranışlarını görselleştirin",
+      "category": "analytics",
+      "enabled": false,
+      "icon": "🔥",
+      "config": {
+        "siteId": ""
+      }
+    },
+    {
+      "id": "trustpilot",
+      "name": "Trustpilot",
+      "description": "Müşteri yorumlarını ve değerlendirmelerini gösterin",
+      "category": "reviews",
+      "enabled": false,
+      "icon": "⭐",
+      "config": {
+        "businessUnitId": "",
+        "templateId": ""
+      }
+    }
+  ]
+}
+
+

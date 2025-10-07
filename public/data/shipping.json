@@ -1,0 +1,24 @@
+{
+  "methods": [
+    {
+      "id": "selbst-abholen",
+      "name": "Selbst Abholen",
+      "description": "Elden teslim - Mağazadan kendiniz teslim alın",
+      "price": 0,
+      "estimatedDays": "0",
+      "enabled": true,
+      "carrier": "pickup"
+    },
+    {
+      "id": "ups-standard",
+      "name": "UPS Standard",
+      "description": "UPS ile standart kargo",
+      "price": 800,
+      "estimatedDays": "2-3",
+      "enabled": true,
+      "carrier": "ups"
+    }
+  ]
+}
+
+
