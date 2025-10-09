@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic";
 import { Hero } from "./(home)/hero";
 import { TrustBadges, USPBar, MiniFAQ } from "./(home)/sections";
 import HomeAllProducts from "./(home)/HomeAllProducts";
+import HomeTestimonials from "@/components/HomeTestimonials";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
@@ -71,6 +72,7 @@ export default async function HomePage({ params }: PageProps) {
       />
       <USPBar totalCount={totalCount} />
       <HomeAllProducts locale={resolvedLocale as any} />
+      <HomeTestimonials />
       <TrustBadges />
       <MiniFAQ />
     </div>

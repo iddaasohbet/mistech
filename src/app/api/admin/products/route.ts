@@ -33,10 +33,15 @@ export async function GET(request: Request) {
       }
     }
 
-    // Fetch DB products (overrides and created ones)
-    const dbProducts = await (prisma as any).product.findMany({
-      include: { category: true },
-    });
+    // Fetch DB products (overrides and created ones) – fail soft if DB unavailable
+    let dbProducts: any[] = [];
+    try {
+      dbProducts = await (prisma as any).product.findMany({ include: { category: true } });
+    } catch (err) {
+      // ignore DB errors in demo/dev so imported products still show
+      console.warn("DB unavailable, showing imported products only");
+      dbProducts = [];
+    }
 
     // Merge: prefer DB price/title/etc when same id exists
     const mergedMap = new Map<string, any>();

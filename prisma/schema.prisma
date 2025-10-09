@@ -57,6 +57,7 @@ model Review {
   rating    Int
   content   String
   author    String
+  approved  Boolean  @default(false)
   createdAt DateTime @default(now())
 }
 

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { LayoutGrid, Package2, ShoppingCart, BarChart3, Users, BookOpen, Settings, Globe, Tag, Boxes, Image as ImageIcon } from "lucide-react";
+import { LayoutGrid, Package2, ShoppingCart, BarChart3, Users, BookOpen, Settings, Globe, Tag, Boxes, Image as ImageIcon, MessageSquare } from "lucide-react";
 
 type Item = { label: string; href: string; icon: React.ComponentType<any> };
 type Group = { title: string; items: Item[] };
@@ -22,6 +22,9 @@ export default function AdminSidebar({ base }: { base: string }) {
     ]},
     { title: "Müşteriler", items: [
       { label: "Müşteriler", href: `${base}/customers`, icon: Users },
+    ]},
+    { title: "Topluluk", items: [
+      { label: "Yorumlar", href: `${base}/reviews`, icon: MessageSquare },
     ]},
     { title: "İçerik", items: [
       { label: "SSS", href: `${base}/faq`, icon: BookOpen },

@@ -8,6 +8,7 @@ import { buildImportedSlug, findImportedProductBySlug, getSimilarImportedProduct
 import * as cheerio from "cheerio";
 import { enrichPriceForUrl } from "@/lib/price-enrich";
 import SimilarSlider from "./SimilarSlider";
+import Reviews from "@/components/Reviews";
 import InfoPanel from "./InfoPanel";
 import Gallery from "./Gallery";
 import { notFound } from "next/navigation";
@@ -97,6 +98,9 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             </Tabs>
           </div>
           <div className="lg:col-span-2">
+            <div className="mt-6">
+              <Reviews productId={imp.product.id} seed={imp.product.id} locale={locale} />
+            </div>
             <h2 className="text-xl font-semibold mb-4">{t.similar || 'Benzer Ürünler'}</h2>
             <SimilarSlider
               products={similar}
@@ -161,6 +165,9 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         </Tabs>
       </div>
       <div className="lg:col-span-2">
+        <div className="mt-6">
+          <Reviews productId={product.id} seed={product.id} locale={locale} />
+        </div>
         <h2 className="text-xl font-semibold mb-4">{t.similar || 'Benzer Ürünler'}</h2>
         <SimilarSlider
           products={similar.map((p) => ({ id: p.id, slug: p.slug, title: p.title, brand: p.brand, price: p.price, images: (p.images as unknown as string[]) || [] }))}

@@ -6,6 +6,7 @@ import { useSession } from "next-auth/react";
 import { generateStockCode } from "@/lib/stock-code";
 import Link from "next/link";
 import { LogIn, UserPlus } from "lucide-react";
+import RatingStars from "@/components/RatingStars";
 
 type Currency = "TRY" | "EUR";
 
@@ -62,6 +63,9 @@ export default function InfoPanel({
       <div>
         {brand && <div className="text-sm text-muted-foreground">{brand}</div>}
         <h1 className="text-2xl font-semibold leading-tight">{title}</h1>
+        <div className="mt-2">
+          <RatingStars seed={productId || title} canRate={isLoggedIn} />
+        </div>
         {stockCode && (
           <div className="mt-2 text-xs text-muted-foreground">
             {t.stockCode}: <span className="font-mono font-medium text-foreground">{stockCode}</span>
