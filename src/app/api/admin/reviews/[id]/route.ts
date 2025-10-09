@@ -5,7 +5,7 @@ import { authOptions } from "@/lib/auth";
 
 // Note: Loosen the type of the second argument to avoid TS incompatibility across Next.js versions
 export async function PATCH(_req: Request, context: any) {
-  const session = await getServerSession(authOptions as any);
+  const session: any = await getServerSession(authOptions as any);
   if (!session?.user?.id) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   try {
     const body = await _req.json();
