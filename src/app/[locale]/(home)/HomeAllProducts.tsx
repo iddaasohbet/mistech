@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { type ImportedCategory, type ImportedItem } from "@/lib/imports";
+import { buildImportedSlug } from "@/lib/imports-client";
 import FeaturedProductsSlider from "@/app/[locale]/(home)/FeaturedProductsSlider";
 import FavoritesRow from "@/app/[locale]/(home)/FavoritesRow";
 import HomeBannerGrid from "@/app/[locale]/(home)/HomeBannerGrid";
@@ -40,7 +41,7 @@ export default async function HomeAllProducts({ locale }: { locale: string }) {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
           {featured.map((p) => (
-            <a key={p.id} href={`/${locale}/urun/${p.brand ? `${p.brand.toLowerCase()}-${p.slug ?? p.id}` : p.slug ?? p.id}`}
+            <a key={p.id} href={`/${locale}/urun/${buildImportedSlug(p)}`}
               className="group rounded-lg border bg-card hover:shadow-sm transition overflow-hidden">
               <div className="relative aspect-[4/5] bg-neutral-50">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
