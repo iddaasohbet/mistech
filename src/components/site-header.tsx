@@ -18,28 +18,18 @@ export function SiteHeader({ locale }: { locale: string }) {
   const base = `/${locale}`;
   const t = useTranslations('nav');
 
-	const [isHidden, setIsHidden] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 
 	useEffect(() => {
-		let lastY = window.scrollY || 0;
 		const onScroll = () => {
-			const y = window.scrollY || 0;
-			setIsScrolled(y > 4);
-			if (y > lastY && y > 120) {
-				setIsHidden(true);
-			} else {
-				setIsHidden(false);
-			}
-			lastY = y;
+			setIsScrolled(window.scrollY > 10);
 		};
 		window.addEventListener('scroll', onScroll, { passive: true } as any);
 		return () => window.removeEventListener('scroll', onScroll as any);
 	}, []);
 
 	const headerClassName = [
-		"fixed top-0 z-40 w-full bg-white text-foreground transition-transform duration-300",
-		isHidden ? "-translate-y-full" : "translate-y-0",
+		"w-full bg-white text-foreground",
 		isScrolled ? "shadow-sm" : ""
 	].join(" ");
   
@@ -153,8 +143,6 @@ export function SiteHeader({ locale }: { locale: string }) {
         </div>
       </div>
 		</header>
-		/* Spacer to offset fixed header height (mobile has extra language bar) */
-		<div aria-hidden className="md:h-16 h-[76px]" />
   );
 }
 

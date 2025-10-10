@@ -2,9 +2,9 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { type ImportedCategory, type ImportedItem } from "@/lib/imports";
 import { buildImportedSlug } from "@/lib/imports-client";
-import FeaturedProductsSlider from "@/app/[locale]/(home)/FeaturedProductsSlider";
 import FavoritesRow from "@/app/[locale]/(home)/FavoritesRow";
 import HomeBannerGrid from "@/app/[locale]/(home)/HomeBannerGrid";
+import { FeaturedCategories } from "@/app/[locale]/(home)/sections";
 
 async function load(file: string): Promise<ImportedCategory[]> {
   try { const fp=path.join(process.cwd(),"public","data",file); const raw=await readFile(fp,"utf8"); const data=JSON.parse(raw); return Array.isArray(data)? data: []; } catch { return []; }
@@ -33,6 +33,8 @@ export default async function HomeAllProducts({ locale }: { locale: string }) {
     <>
       <FavoritesRow locale={locale} />
       <HomeBannerGrid locale={locale} />
+      {/* Auto-rotating categories with icons */}
+      <FeaturedCategories base={`/${locale}`} />
       {/* Replace slider with 5x3 grid (15 items) */}
       <section className="mx-auto max-w-7xl px-6 py-8">
         <div className="mb-4 flex items-center justify-between">

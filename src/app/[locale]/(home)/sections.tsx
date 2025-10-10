@@ -7,20 +7,21 @@ import { Truck, BadgeCheck, ShieldCheck, Smartphone, BatteryCharging, MonitorSma
 
 export function FeaturedCategories({ base }: { base: string }) {
 	const categories = [
+		// Ana kategoriler
 		{ title: "Telefonlar", href: `${base}/kategori/telefonlar`, Icon: Smartphone },
-        { title: "Samsung Parçaları", href: `${base}/kategori/samsung`, Icon: Smartphone },
-		{ title: "Batarya", href: `${base}/kategori/parcalar?parca=${encodeURIComponent("Batarya")}` , Icon: BatteryCharging },
-		{ title: "Ekran", href: `${base}/kategori/parcalar?parca=${encodeURIComponent("Ekran")}`, Icon: MonitorSmartphone },
-		{ title: "Kulaklık", href: `${base}/kategori/parcalar?alt=${encodeURIComponent("Kulaklık")}`, Icon: Headphones },
-		{ title: "Kılıf", href: `${base}/kategori/parcalar?alt=${encodeURIComponent("Kılıf")}`, Icon: Shield },
-		{ title: "Kablosuz Şarj", href: `${base}/kategori/parcalar?alt=${encodeURIComponent("Kablosuz Şarj")}`, Icon: Wifi },
-		{ title: "Bluetooth Aksesuar", href: `${base}/kategori/parcalar?alt=${encodeURIComponent("Bluetooth Aksesuar")}`, Icon: Bluetooth },
-		{ title: "İşlemci/Yonga", href: `${base}/kategori/parcalar?parca=${encodeURIComponent("Anakart Parçaları")}`, Icon: Cpu },
-		{ title: "Depolama", href: `${base}/kategori/parcalar?alt=${encodeURIComponent("Depolama")}`, Icon: HardDrive },
-		{ title: "Kablolar", href: `${base}/kategori/parcalar?alt=${encodeURIComponent("Kablo")}`, Icon: Cable },
-		{ title: "Hoparlör", href: `${base}/kategori/parcalar?parca=${encodeURIComponent("Hoparlör")}`, Icon: Speaker },
-        { title: "Kamera", href: `${base}/kategori/parcalar?parca=${encodeURIComponent("Kamera Modülü")}` , Icon: Camera },
-		{ title: "Hızlı Şarj", href: `${base}/kategori/parcalar?alt=${encodeURIComponent("Şarj Cihazı")}`, Icon: Zap }
+		{ title: "Samsung Parçaları", href: `${base}/kategori/samsung`, Icon: Smartphone },
+		{ title: "Apple Parçaları", href: `${base}/kategori/app`, Icon: Smartphone },
+		{ title: "Xiaomi Parçaları", href: `${base}/kategori/xiaomi`, Icon: Smartphone },
+		{ title: "Huawei Parçaları", href: `${base}/kategori/huawei`, Icon: Smartphone },
+
+		// Aksesuarlar (header ile uyumlu query'ler)
+		{ title: "Ekran Koruyucu", href: `${base}/kategori/accessories?type=screen-protectors`, Icon: MonitorSmartphone },
+		{ title: "Kılıf", href: `${base}/kategori/accessories?type=cases-and-covers`, Icon: Shield },
+		{ title: "Tutamaç / Stand", href: `${base}/kategori/accessories?type=holders`, Icon: Headphones },
+		{ title: "Kablo", href: `${base}/kategori/accessories?type=cables`, Icon: Cable },
+		{ title: "Şarj Cihazı", href: `${base}/kategori/accessories?type=chargers`, Icon: BatteryCharging },
+		{ title: "Ses / Audio", href: `${base}/kategori/accessories?type=audio`, Icon: Speaker },
+		{ title: "Depolama", href: `${base}/kategori/accessories?type=data-storage`, Icon: HardDrive },
     ] as const;
 
 	return (
