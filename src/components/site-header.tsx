@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 // compact, pro categories menu: only imported brands
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
@@ -16,9 +17,34 @@ export function SiteHeader({ locale }: { locale: string }) {
   const pathname = usePathname();
   const base = `/${locale}`;
   const t = useTranslations('nav');
+
+	const [isHidden, setIsHidden] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
+
+	useEffect(() => {
+		let lastY = window.scrollY || 0;
+		const onScroll = () => {
+			const y = window.scrollY || 0;
+			setIsScrolled(y > 4);
+			if (y > lastY && y > 120) {
+				setIsHidden(true);
+			} else {
+				setIsHidden(false);
+			}
+			lastY = y;
+		};
+		window.addEventListener('scroll', onScroll, { passive: true } as any);
+		return () => window.removeEventListener('scroll', onScroll as any);
+	}, []);
+
+	const headerClassName = [
+		"sticky top-0 z-40 w-full bg-white text-foreground transition-transform duration-300",
+		isHidden ? "-translate-y-full" : "translate-y-0",
+		isScrolled ? "shadow-sm" : ""
+	].join(" ");
   
   return (
-    <header className="sticky top-0 z-40 w-full bg-white text-foreground">
+		<header className={headerClassName}>
       {/* Mobile language area */}
       <div className="md:hidden bg-neutral-50/80 backdrop-blur border-b">
         <div className="mx-auto max-w-7xl px-4 h-11 flex items-center justify-between">
