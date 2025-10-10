@@ -38,12 +38,12 @@ export function SiteHeader({ locale }: { locale: string }) {
 	}, []);
 
 	const headerClassName = [
-		"sticky top-0 z-40 w-full bg-white text-foreground transition-transform duration-300",
+		"fixed top-0 z-40 w-full bg-white text-foreground transition-transform duration-300",
 		isHidden ? "-translate-y-full" : "translate-y-0",
 		isScrolled ? "shadow-sm" : ""
 	].join(" ");
   
-  return (
+	return (
 		<header className={headerClassName}>
       {/* Mobile language area */}
       <div className="md:hidden bg-neutral-50/80 backdrop-blur border-b">
@@ -152,7 +152,9 @@ export function SiteHeader({ locale }: { locale: string }) {
           </div>
         </div>
       </div>
-    </header>
+		</header>
+		/* Spacer to offset fixed header height (mobile has extra language bar) */
+		<div aria-hidden className="md:h-16 h-[76px]" />
   );
 }
 
