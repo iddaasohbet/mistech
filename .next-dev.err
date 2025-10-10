@@ -1,0 +1,50 @@
+ ⚠ Port 3000 is in use by process 34544, using available port 3002 instead.
+[telemetry] {
+  "eventName": "NEXT_CLI_SESSION_STARTED",
+  "payload": {
+    "nextVersion": "15.5.4",
+    "nodeVersion": "v22.16.0",
+    "cliCommand": "dev",
+    "isSrcDir": true,
+    "hasNowJson": false,
+    "isCustomServer": false,
+    "hasNextConfig": true,
+    "buildTarget": "default",
+    "hasWebpackConfig": false,
+    "hasBabelConfig": false,
+    "imageEnabled": true,
+    "imageFutureEnabled": true,
+    "basePathEnabled": false,
+    "i18nEnabled": false,
+    "locales": null,
+    "localeDomainsCount": null,
+    "localeDetectionEnabled": null,
+    "imageDomainsCount": 0,
+    "imageRemotePatternsCount": 11,
+    "imageLocalPatternsCount": null,
+    "imageSizes": "16,32,48,64,96,128,256,384",
+    "imageQualities": null,
+    "imageLoader": "default",
+    "imageFormats": "image/webp",
+    "nextConfigOutput": null,
+    "trailingSlashEnabled": false,
+    "reactStrictMode": false,
+    "webpackVersion": 5,
+    "turboFlag": true,
+    "isRspack": false,
+    "appDir": true,
+    "pagesDir": false,
+    "staticStaleTime": 300,
+    "dynamicStaleTime": 0,
+    "reactCompiler": false,
+    "reactCompilerCompilationMode": null,
+    "reactCompilerPanicThreshold": null
+  }
+}
+[telemetry] {
+  "eventName": "NEXT_BUILD_FEATURE_USAGE",
+  "payload": {
+    "featureName": "turbopackPersistentCaching",
+    "invocationCount": 0
+  }
+}
