@@ -195,16 +195,19 @@ export default function HomeTestimonials({ seed = "global" }: { seed?: string })
         <div className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-background to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-background to-transparent" />
 
-        <div className="absolute bottom-3 left-0 right-0 flex items-center justify-center gap-2">
-          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
-            <button
-              key={i}
-              aria-label={`Slide ${i + 1}`}
-              className={clsx("h-1.5 w-5 rounded-full transition-colors", i === index ? "bg-foreground" : "bg-muted-foreground/40")}
-              onClick={() => setIndex(i)}
-            />
-          ))}
-        </div>
+        {/* move pagination below slider and use dots instead of bars */}
+        <div className="mt-4" />
+      </div>
+
+      <div className="mt-2 flex items-center justify-center gap-2">
+        {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+          <button
+            key={i}
+            aria-label={`Slide ${i + 1}`}
+            className={clsx("h-2 w-2 rounded-full ring-1 ring-black/10 transition-colors", i === index ? "bg-foreground" : "bg-muted-foreground/40 hover:bg-muted-foreground/60")}
+            onClick={() => setIndex(i)}
+          />
+        ))}
       </div>
     </section>
   );
