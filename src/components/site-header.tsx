@@ -18,23 +18,42 @@ export function SiteHeader({ locale }: { locale: string }) {
   const base = `/${locale}`;
   const t = useTranslations('nav');
 
-	const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-	useEffect(() => {
-		const onScroll = () => {
-			setIsScrolled(window.scrollY > 10);
-		};
-		window.addEventListener('scroll', onScroll, { passive: true } as any);
-		return () => window.removeEventListener('scroll', onScroll as any);
-	}, []);
+  // Hide on scroll down, show on scroll up (works on mobile & desktop)
+  useEffect(() => {
+    let last = window.scrollY;
+    let ticking = false;
+    const update = () => {
+      const y = window.scrollY;
+      setIsScrolled(y > 10);
+      // small threshold to avoid jitter
+      if (Math.abs(y - last) > 6) {
+        setIsHidden(y > 64 && y > last);
+        last = y;
+      }
+      ticking = false;
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true } as any);
+    return () => window.removeEventListener('scroll', onScroll as any);
+  }, []);
 
-	const headerClassName = [
-		"w-full bg-white text-foreground",
-		isScrolled ? "shadow-sm" : ""
-	].join(" ");
+  const headerClassName = [
+    "fixed top-0 z-50 w-full bg-white text-foreground transition-transform duration-300 ease-out",
+    isHidden ? "-translate-y-full" : "translate-y-0",
+    isScrolled ? "shadow-sm" : ""
+  ].join(" ");
   
-	return (
-		<header className={headerClassName}>
+  return (
+    <>
+    <header className={headerClassName}>
       {/* Mobile language area */}
       <div className="md:hidden bg-neutral-50/80 backdrop-blur border-b">
         <div className="mx-auto max-w-7xl px-4 h-11 flex items-center justify-between">
@@ -142,7 +161,10 @@ export function SiteHeader({ locale }: { locale: string }) {
           </div>
         </div>
       </div>
-		</header>
+    </header>
+    {/* offset for fixed header */}
+    <div aria-hidden="true" className="md:h-16 h-[76px]" />
+    </>
   );
 }
 
