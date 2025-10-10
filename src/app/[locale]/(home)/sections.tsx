@@ -6,29 +6,31 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Truck, BadgeCheck, ShieldCheck, Smartphone, BatteryCharging, MonitorSmartphone, Headphones, Shield, Wifi, Bluetooth, Cpu, HardDrive, Cable, Speaker, Camera, Zap, HelpCircle, Search, Mail, Bell, Send, CheckCircle, XCircle, X, UserMinus } from "lucide-react";
 
 export function FeaturedCategories({ base }: { base: string }) {
+	const t = useTranslations('home');
+	const tn = useTranslations('nav');
 	const categories = [
 		// Ana kategoriler
-		{ title: "Telefonlar", href: `${base}/kategori/telefonlar`, Icon: Smartphone },
-		{ title: "Samsung Parçaları", href: `${base}/kategori/samsung`, Icon: Smartphone },
-		{ title: "Apple Parçaları", href: `${base}/kategori/app`, Icon: Smartphone },
-		{ title: "Xiaomi Parçaları", href: `${base}/kategori/xiaomi`, Icon: Smartphone },
-		{ title: "Huawei Parçaları", href: `${base}/kategori/huawei`, Icon: Smartphone },
+		{ title: t('phones'), href: `${base}/kategori/telefonlar`, Icon: Smartphone },
+		{ title: t('samsungParts'), href: `${base}/kategori/samsung`, Icon: Smartphone },
+		{ title: 'Apple', href: `${base}/kategori/app`, Icon: Smartphone },
+		{ title: 'Xiaomi', href: `${base}/kategori/xiaomi`, Icon: Smartphone },
+		{ title: 'Huawei', href: `${base}/kategori/huawei`, Icon: Smartphone },
 
 		// Aksesuarlar (header ile uyumlu query'ler)
-		{ title: "Ekran Koruyucu", href: `${base}/kategori/accessories?type=screen-protectors`, Icon: MonitorSmartphone },
-		{ title: "Kılıf", href: `${base}/kategori/accessories?type=cases-and-covers`, Icon: Shield },
-		{ title: "Tutamaç / Stand", href: `${base}/kategori/accessories?type=holders`, Icon: Headphones },
-		{ title: "Kablo", href: `${base}/kategori/accessories?type=cables`, Icon: Cable },
-		{ title: "Şarj Cihazı", href: `${base}/kategori/accessories?type=chargers`, Icon: BatteryCharging },
-		{ title: "Ses / Audio", href: `${base}/kategori/accessories?type=audio`, Icon: Speaker },
-		{ title: "Depolama", href: `${base}/kategori/accessories?type=data-storage`, Icon: HardDrive },
+		{ title: tn('screenProtectors'), href: `${base}/kategori/accessories?type=screen-protectors`, Icon: MonitorSmartphone },
+		{ title: tn('casesCovers'), href: `${base}/kategori/accessories?type=cases-and-covers`, Icon: Shield },
+		{ title: tn('holders'), href: `${base}/kategori/accessories?type=holders`, Icon: Headphones },
+		{ title: tn('cables'), href: `${base}/kategori/accessories?type=cables`, Icon: Cable },
+		{ title: tn('chargers'), href: `${base}/kategori/accessories?type=chargers`, Icon: BatteryCharging },
+		{ title: tn('audio'), href: `${base}/kategori/accessories?type=audio`, Icon: Speaker },
+		{ title: tn('storage'), href: `${base}/kategori/accessories?type=data-storage`, Icon: HardDrive },
     ] as const;
 
 	return (
-        <section className="mx-auto max-w-7xl px-6 pt-2 pb-6">
+		<section className="mx-auto max-w-7xl px-6 pt-2 pb-6">
 			<div className="mb-4 flex items-center justify-between">
-				<h2 className="text-xl font-semibold">Öne Çıkan Kategoriler</h2>
-				<a href={base + "/urunler"} className="text-sm text-muted-foreground hover:text-foreground">Tümünü Gör →</a>
+				<h2 className="text-xl font-semibold">{t('featuredCategories')}</h2>
+				<a href={base + "/urunler"} className="text-sm text-muted-foreground hover:text-foreground">{t('viewAll')} →</a>
 			</div>
             <FeaturedSlider items={categories} />
 		</section>
@@ -84,7 +86,7 @@ function FeaturedSlider({
                                 </div>
                                 <div className="flex-1 min-w-0">
                                     <div className="text-sm font-medium truncate">{title}</div>
-                                    <div className="text-xs text-muted-foreground group-hover:text-foreground/70 transition-colors">İncele</div>
+                                    <div className="text-xs text-muted-foreground group-hover:text-foreground/70 transition-colors">{useTranslations('home')('explore')}</div>
                                 </div>
                                 <div className="opacity-0 group-hover:opacity-100 transition text-muted-foreground">→</div>
 								</CardContent>
@@ -98,6 +100,7 @@ function FeaturedSlider({
 
 export function TrustBadges() {
 	// Bu bölüm yerine abone ol alanı gösterilecek
+	const t = useTranslations('home');
 	const [email, setEmail] = useState("");
 	const [ok, setOk] = useState<boolean | null>(null);
 	const [loading, setLoading] = useState(false);
@@ -122,11 +125,11 @@ export function TrustBadges() {
 					{/* Premium badge */}
 					<div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white px-4 py-1.5 text-xs font-medium mb-6">
 						<Bell className="w-3.5 h-3.5" />
-						Exclusive Updates
+						{t('exclusiveUpdates')}
 					</div>
 					
-					<h2 className="text-3xl font-bold tracking-tight mb-3">Kampanyalardan Haberdar Ol</h2>
-					<p className="text-white/70 text-base mb-8 max-w-lg mx-auto">Özel indirimler ve yeni ürünler için e-posta ile abone ol. Premium müşteri deneyimi.</p>
+					<h2 className="text-3xl font-bold tracking-tight mb-3">{t('subscribeTitle')}</h2>
+					<p className="text-white/70 text-base mb-8 max-w-lg mx-auto">{t('subscribeDesc')}</p>
 					
 					<form onSubmit={onSubmit} className="max-w-md mx-auto">
 						<div className="flex gap-3">
@@ -137,7 +140,7 @@ export function TrustBadges() {
 									required 
 									value={email} 
 									onChange={(e)=>setEmail(e.target.value)} 
-									placeholder="E-posta adresiniz" 
+									placeholder={t('emailPlaceholder')} 
 									className="w-full h-12 pl-10 pr-4 rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all text-sm" 
 								/>
 							</div>
@@ -149,12 +152,12 @@ export function TrustBadges() {
 								{loading ? (
 									<>
 										<div className="w-4 h-4 border-2 border-primary/30 border-t-primary rounded-full animate-spin"></div>
-										Gönderiliyor...
+										{t('sending')}
 									</>
 								) : (
 									<>
 										<Send className="w-4 h-4" />
-										Abone Ol
+										{t('subscribe')}
 									</>
 								)}
 							</button>
@@ -164,13 +167,13 @@ export function TrustBadges() {
 					{ok === true && (
 						<div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-emerald-500/20 border border-emerald-400/30 text-emerald-100 px-4 py-2 text-sm">
 							<CheckCircle className="w-4 h-4" />
-							Abonelik talebin alındı. Teşekkürler!
+							{t('subscribeSuccess')}
 						</div>
 					)}
 					{ok === false && (
 						<div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-red-500/20 border border-red-400/30 text-red-100 px-4 py-2 text-sm">
 							<XCircle className="w-4 h-4" />
-							Abonelik tamamlanamadı. Tekrar dene.
+							{t('subscribeFail')}
 						</div>
 					)}
 					
@@ -261,36 +264,37 @@ export function BrandCarousel() {
 
 export function MiniFAQ() {
     // Admin panelinden içeriğe bağlanacak örnek veri
-    const items = [
-        { q: "Kargo süresi nedir?", a: "Hafta içi 16:00'ya kadar verilen siparişler aynı gün kargoya verilir. Teslimat genellikle 2-3 iş günü sürer." },
-        { q: "İade şartları?", a: "Ürünü 14 gün içinde, hasarsız ve eksiksiz olarak iade edebilirsiniz. İade talebinizi Hesabım > Siparişlerim üzerinden başlatın." },
-        { q: "Ürünler orijinal mi?", a: "Tüm ürünler faturalı, bandrollü ve üretici garantilidir. Mağazamızda sahte ürün satışı yapılmaz." },
-        { q: "Garanti kapsamı?", a: "Elektronik ürünler en az 24 ay yetkili servis garantisine sahiptir. Arıza durumunda kutu içindeki garanti belgesiyle başvurabilirsiniz." },
-        { q: "Ödeme yöntemleri?", a: "Kredi/Banka kartı, havale/EFT ve kapıda ödeme (uygun ürünlerde) seçenekleri mevcuttur." },
-        { q: "Sipariş takibi?", a: "Kargo takip numaranız, siparişiniz kargoya verildiğinde e-posta ile iletilir ve Hesabım > Siparişlerim sayfasında görünür." }
-    ];
+	const t = useTranslations('home');
+	const items = [
+		{ q: t('faq.q1'), a: t('faq.a1') },
+		{ q: t('faq.q2'), a: t('faq.a2') },
+		{ q: t('faq.q3'), a: t('faq.a3') },
+		{ q: t('faq.q4'), a: t('faq.a4') },
+		{ q: t('faq.q5'), a: t('faq.a5') },
+		{ q: t('faq.q6'), a: t('faq.a6') }
+	];
 
     const [query, setQuery] = useState("");
     const filtered = items.filter(x => (x.q + " " + x.a).toLowerCase().includes(query.toLowerCase()));
 
     return (
-        <section className="relative bg-white text-foreground">
+		<section className="relative bg-white text-foreground">
             <div className="mx-auto max-w-7xl px-6 py-14">
                 <div className="mb-8 text-center">
-                    <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-semibold">
-                        <HelpCircle className="w-3.5 h-3.5" /> Yardım & Destek
+					<div className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-semibold">
+						<HelpCircle className="w-3.5 h-3.5" /> {t('helpSupport')}
                     </div>
-                    <h2 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight">Sıkça Sorulan Sorular</h2>
-                    <p className="text-muted-foreground text-sm md:text-base mt-2">Sipariş, kargo, iade ve garanti hakkında merak ettiklerin</p>
+					<h2 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight">{t('faqTitle')}</h2>
+					<p className="text-muted-foreground text-sm md:text-base mt-2">{t('faqSubtitle')}</p>
                 </div>
 
                 <div className="mx-auto max-w-3xl mb-6">
                     <div className="relative">
                         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                        <input
+								<input
                             value={query}
                             onChange={(e)=>setQuery(e.target.value)}
-                            placeholder="Soru ara..."
+									placeholder={t('searchPlaceholder')}
                             className="w-full h-11 pl-10 pr-3 rounded-md border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
                         />
                     </div>
@@ -315,15 +319,15 @@ export function MiniFAQ() {
                         </div>
                     </Accordion>
 
-                    {filtered.length === 0 && (
-                        <div className="text-center text-muted-foreground mt-8">Aramanızla eşleşen sonuç bulunamadı.</div>
-                    )}
+						{filtered.length === 0 && (
+							<div className="text-center text-muted-foreground mt-8">{t('noResults')}</div>
+						)}
 
-                    <div className="mt-8 text-center">
-                        <a href="/iletisim" className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm hover:bg-accent/60">
-                            <HelpCircle className="w-4 h-4" /> Sorunu çözemediysen bizimle iletişime geç
-                        </a>
-                    </div>
+						<div className="mt-8 text-center">
+							<a href="/iletisim" className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm hover:bg-accent/60">
+								<HelpCircle className="w-4 h-4" /> {t('contactCta')}
+							</a>
+						</div>
                 </div>
             </div>
         </section>

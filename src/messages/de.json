@@ -109,6 +109,14 @@
     "featuredCategories": "Beliebte Kategorien",
     "viewAll": "Alle anzeigen",
     "explore": "Entdecken",
+    "exclusiveUpdates": "Exklusive Updates",
+    "subscribeTitle": "Über Aktionen informiert bleiben",
+    "subscribeDesc": "Abonnieren Sie unseren Newsletter für exklusive Rabatte und neue Produkte.",
+    "emailPlaceholder": "Ihre E-Mail-Adresse",
+    "sending": "Wird gesendet...",
+    "subscribe": "Abonnieren",
+    "subscribeSuccess": "Ihr Abonnement wurde erhalten. Vielen Dank!",
+    "subscribeFail": "Abonnement fehlgeschlagen. Bitte erneut versuchen.",
     "phones": "Telefone",
     "samsungParts": "Samsung Ersatzteile",
     "battery": "Batterie",
@@ -137,7 +145,27 @@
     "securePaymentDesc": "SSL-Verschlüsselung",
     "liveSupportTitle": "Live-Support",
     "liveSupportDesc": "24/7 WhatsApp",
-    "popularBrands": "Beliebte Marken"
+    "popularBrands": "Beliebte Marken",
+    "helpSupport": "Hilfe & Support",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faqSubtitle": "Fragen zu Bestellung, Versand, Rückgabe und Garantie",
+    "searchPlaceholder": "Frage suchen...",
+    "noResults": "Keine Ergebnisse gefunden.",
+    "contactCta": "Wenn Sie Ihr Problem nicht lösen konnten, kontaktieren Sie uns",
+    "faq": {
+      "q1": "Wie lange dauert der Versand?",
+      "a1": "Bestellungen bis 16:00 Uhr werden am selben Tag versendet. Lieferung in der Regel 2-3 Werktage.",
+      "q2": "Was sind die Rückgabebedingungen?",
+      "a2": "Sie können Produkte innerhalb von 14 Tagen unbeschädigt und vollständig zurückgeben.",
+      "q3": "Sind die Produkte original?",
+      "a3": "Alle Produkte sind original, mit Rechnung und Herstellergarantie.",
+      "q4": "Was umfasst die Garantie?",
+      "a4": "Elektronikprodukte haben mindestens 24 Monate autorisierte Servicegarantie.",
+      "q5": "Welche Zahlungsmethoden gibt es?",
+      "a5": "Kredit-/Debitkarte, Überweisung/EFT und Nachnahme (bei geeigneten Produkten).",
+      "q6": "Wie verfolge ich meine Bestellung?",
+      "a6": "Die Sendungsverfolgung wird per E-Mail gesendet und ist unter Mein Konto > Bestellungen sichtbar."
+    }
   },
   "pages": {
     "login": {
