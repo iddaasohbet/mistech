@@ -27,7 +27,7 @@ const nextConfig: NextConfig = {
 	// Ana kökten varsayılan dili (tr) alt yoluna yönlendir
 	async redirects() {
 		return [
-			{ source: '/', destination: '/tr', permanent: true },
+			{ source: '/', destination: '/de', permanent: true },
 		];
 	},
 	eslint: { ignoreDuringBuilds: true },
