@@ -4,6 +4,7 @@ import { locales, Locale } from "../i18n";
 import { ThemeProvider } from "@/components/theme-provider";
 import Providers from "../providers";
 import SiteChrome from "@/components/SiteChrome";
+import SuspendOverlay from "@/components/SuspendOverlay";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -26,6 +27,7 @@ export default async function LocaleLayout({
       <Providers>
         <ThemeProvider>
           <SiteChrome locale={locale}>{children}</SiteChrome>
+          <SuspendOverlay />
         </ThemeProvider>
       </Providers>
     </NextIntlClientProvider>
